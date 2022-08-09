@@ -39,6 +39,11 @@ TASK 2
    from Emp
    order by sal;
 
+8) SELECT * FROM Dept
+   WHERE NOT EXISTS 
+   (select deptno FROM Emp where dept.deptno=emp.deptno);
+
+
 
 9) select Ename,sal 
    from Emp
