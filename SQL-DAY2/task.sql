@@ -73,9 +73,11 @@ where ename like '%l%l%' and (deptno=30 or mgrid=7782);
 
 16)
 
-select ename 
+
+select ename,COUNT(empno) AS 'NUMBER'
 from emp
-where DATEDIFF(MONTH,hiredate,GETDATE())/12 BETWEEN 10 AND 20
+where DATEDIFF(MONTH,hiredate,GETDATE())/12 BETWEEN 30 AND 40
+GROUP BY CUBE(eNAME)
 
 
 17)
